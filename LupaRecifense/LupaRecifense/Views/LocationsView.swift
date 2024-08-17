@@ -12,14 +12,17 @@ struct LocationsView: View {
     //@StateObject private var vm = LocationsViewModel()
     @EnvironmentObject private var vm: LocationsViewModel
     var body: some View {
-//        List{
-//            ForEach(vm.locations){
-//                Text($0.name)
-//            }
-//        }
+//
         ZStack{
             mapLayer
                 .ignoresSafeArea()
+            
+            VStack(spacing: 0){
+        
+                Spacer()
+                
+                locationsPreviewStack
+            }
         }
     }
 }
@@ -45,6 +48,19 @@ extension LocationsView{
                         }
                 }
                 .frame(width: 50, height: 50)
+            }
+        }
+    }
+    
+    private var locationsPreviewStack: some View{
+        ZStack{
+            ForEach(vm.locations) { location in
+                if vm.mapLocation == location{
+                    LocationPreviewView(location: location)
+                        .shadow(color: Color.black.opacity(0.3), radius: 20)
+                        .padding()
+                        .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                }
             }
         }
     }

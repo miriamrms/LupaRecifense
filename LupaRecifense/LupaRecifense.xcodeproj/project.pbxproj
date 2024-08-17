@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		179DC1C92C71101C001B77DF /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179DC1C82C71101C001B77DF /* LocationPreviewView.swift */; };
 		17A05DCC2C6E5A0700428253 /* LupaRecifenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A05DCB2C6E5A0700428253 /* LupaRecifenseApp.swift */; };
 		17A05DCE2C6E5A0700428253 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A05DCD2C6E5A0700428253 /* ContentView.swift */; };
 		17A05DD02C6E5A0800428253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A05DCF2C6E5A0800428253 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		179DC1C82C71101C001B77DF /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		17A05DC82C6E5A0700428253 /* LupaRecifense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LupaRecifense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A05DCB2C6E5A0700428253 /* LupaRecifenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LupaRecifenseApp.swift; sourceTree = "<group>"; };
 		17A05DCD2C6E5A0700428253 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				17A05DE52C6E5F6E00428253 /* LocationsView.swift */,
+				179DC1C82C71101C001B77DF /* LocationPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				17A05DE82C6E60B000428253 /* LocationsViewModel.swift in Sources */,
 				17A05DCC2C6E5A0700428253 /* LupaRecifenseApp.swift in Sources */,
 				17A05DE62C6E5F6E00428253 /* LocationsView.swift in Sources */,
+				179DC1C92C71101C001B77DF /* LocationPreviewView.swift in Sources */,
 				17A05DE22C6E5B9700428253 /* Location.swift in Sources */,
 				17A05DDE2C6E5B5100428253 /* LocationsDataService.swift in Sources */,
 			);
@@ -323,6 +327,7 @@
 				DEVELOPMENT_TEAM = 57YNQZ8RV5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lupa;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -352,6 +357,7 @@
 				DEVELOPMENT_TEAM = 57YNQZ8RV5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lupa;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -34,6 +34,7 @@ struct Location: Identifiable, Equatable{
 struct tag{
     let tagName: String
     let tagImage: String
+    let tagColor: String
 }
 
 enum tagPlaces{
@@ -48,16 +49,16 @@ enum tagPlaces{
 func getTagPlace(tg: tagPlaces)->tag{
     switch(tg){
     case .cafe:
-        return tag(tagName: "Cafés", tagImage: "cafe")
+        return tag(tagName: "Cafés", tagImage: "cafe", tagColor: "cafeColor")
     case .parque_pracas:
-        return tag(tagName: "Parques e Praças", tagImage: "parques_pracas")
+        return tag(tagName: "Parques e Praças", tagImage: "parques_pracas", tagColor: "parqueColor")
     case .museus_centros_historicos:
-        return tag(tagName: "Museus e Centros Históricos", tagImage: "museus_centros_historicos")
+        return tag(tagName: "Museus e Cultura", tagImage: "museus_centros_historicos", tagColor: "museuColor")
     case .pontos_turisticos:
-        return tag(tagName: "Pontos Turísticos", tagImage: "pontos_turisticos")
+        return tag(tagName: "Pontos Turísticos", tagImage: "pontos_turisticos", tagColor: "turisticoColor")
     case .restaurante:
-        return tag(tagName: "Restaurantes", tagImage: "restaurante")
+        return tag(tagName: "Restaurantes", tagImage: "restaurante", tagColor: "restauranteColor")
     case .bares_baladas:
-        return tag(tagName: "Bares de Baladas", tagImage: "bares_baladas")
+        return tag(tagName: "Bares de Baladas", tagImage: "bares_baladas", tagColor: "baresColor")
     }
 }
