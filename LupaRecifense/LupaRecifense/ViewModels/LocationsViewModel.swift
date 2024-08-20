@@ -11,6 +11,8 @@ import SwiftUI
 
 class LocationsViewModel: ObservableObject {
     
+    //all tags
+    @Published var tagsToFilter: [String : TagToFilter]
     //all loaded locations
     @Published var locations: [Location]
     //current location on map
@@ -25,6 +27,8 @@ class LocationsViewModel: ObservableObject {
     let mapSpan: MKCoordinateSpan
     
     init() {
+        let tagsToFilter = LocationsDataService.tagsToFilter
+        self.tagsToFilter = tagsToFilter
         let locations = LocationsDataService.locations
         self.locations = locations
         self.mapLocation = Location(name: "", cityName: "", coordinates: CLLocationCoordinate2D(latitude: -8.063167, longitude: -34.871143), description: "", adress: "", imageNames: [""], link: "", tagPlace: .init(tagName: "", tagImage: "", tagColor: ""))

@@ -18,7 +18,7 @@ struct Location: Identifiable, Equatable{
     let imageNames: [String]
     let link: String
     
-    let tagPlace: tag
+    let tagPlace: Tag
     
     //Identifiable
     var id: String{
@@ -31,13 +31,18 @@ struct Location: Identifiable, Equatable{
     
 }
 
-struct tag{
+struct Tag{
     let tagName: String
     let tagImage: String
     let tagColor: String
 }
 
-enum tagPlaces{
+struct TagToFilter{
+    let tagInformation: Tag
+    var showOnMap: Bool
+}
+
+enum TagPlaces{
     case cafe
     case parque_pracas
     case museus_centros_historicos
@@ -46,19 +51,19 @@ enum tagPlaces{
     case bares_baladas
 }
 
-func getTagPlace(tg: tagPlaces)->tag{
+func getTagPlace(tg: TagPlaces)->Tag{
     switch(tg){
     case .cafe:
-        return tag(tagName: "Cafés", tagImage: "cafe", tagColor: "cafeColor")
+        return Tag(tagName: "Cafés", tagImage: "cafe", tagColor: "cafeColor")
     case .parque_pracas:
-        return tag(tagName: "Parques e Praças", tagImage: "parques_pracas", tagColor: "parqueColor")
+        return Tag(tagName: "Parques e Praças", tagImage: "parques_pracas", tagColor: "parqueColor")
     case .museus_centros_historicos:
-        return tag(tagName: "Museus e Cultura", tagImage: "museus_centros_historicos", tagColor: "museuColor")
+        return Tag(tagName: "Museus e Cultura", tagImage: "museus_centros_historicos", tagColor: "museuColor")
     case .pontos_turisticos:
-        return tag(tagName: "Pontos Turísticos", tagImage: "pontos_turisticos", tagColor: "turisticoColor")
+        return Tag(tagName: "Pontos Turísticos", tagImage: "pontos_turisticos", tagColor: "turisticoColor")
     case .restaurante:
-        return tag(tagName: "Restaurantes", tagImage: "restaurante", tagColor: "restauranteColor")
+        return Tag(tagName: "Restaurantes", tagImage: "restaurante", tagColor: "restauranteColor")
     case .bares_baladas:
-        return tag(tagName: "Bares de Baladas", tagImage: "bares_baladas", tagColor: "baresColor")
+        return Tag(tagName: "Bares de Baladas", tagImage: "bares_baladas", tagColor: "baresColor")
     }
 }

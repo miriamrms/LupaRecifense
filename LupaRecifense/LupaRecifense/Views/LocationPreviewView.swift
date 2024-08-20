@@ -11,34 +11,41 @@ struct LocationPreviewView: View {
     @EnvironmentObject private var vm: LocationsViewModel
     let location: Location
     var body: some View {
-        HStack(alignment: .bottom, spacing: 0){
-            VStack(alignment: .leading, spacing: 16.0){
+//        HStack(alignment: .bottom, spacing: 0){
+//            VStack(alignment: .leading, spacing: 16.0){
+//                imageSection
+//                titleSection
+//            }
+//            VStack(spacing: 8){
+//                learnMoreButton
+//                nextButton
+//            }
+//        }
+//        .padding(20)
+//        .background(RoundedRectangle(cornerRadius: 10)
+//            .fill(.ultraThinMaterial)
+//            .offset(y: 50))
+//        .cornerRadius(10)
+    
+        VStack(alignment: .leading){
+            HStack(spacing: 16.0){
                 imageSection
                 titleSection
+                    .padding(.top, 36)
             }
-            VStack(spacing: 8){
+            .padding(.bottom,12)
+            HStack(spacing: 16.0){
                 learnMoreButton
                 nextButton
+                Spacer()
+                favoriteButton
             }
         }
         .padding(20)
         .background(RoundedRectangle(cornerRadius: 10)
             .fill(.ultraThinMaterial)
-            .offset(y: 65))
+            .offset(y: 50))
         .cornerRadius(10)
-        
-//        VStack(alignment: .leading, spacing: 0){
-//        
-//            imageSection
-//            titleSection
-//                .background(Color.gray)
-//            
-//        }
-//        .padding(20)
-//        .background(RoundedRectangle(cornerRadius: 10)
-//            .fill(.ultraThinMaterial)
-//            .offset(y: 65))
-//        .cornerRadius(10)
         
     }
 }
@@ -71,7 +78,7 @@ extension LocationPreviewView{
     }
     
     private var titleSection: some View{
-        VStack(alignment: .leading, spacing: 4){
+        VStack(alignment: .leading, spacing: 8){
             Text(location.name)
                 .font(.body)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -105,6 +112,16 @@ extension LocationPreviewView{
                 .foregroundColor(Color(location.tagPlace.tagColor))
         }
         .buttonStyle(.bordered)
+    }
+    
+    private var favoriteButton: some View{
+        Button{
+            
+        } label:{
+            Image(systemName: "heart")
+                .foregroundColor(.black)
+                .font(.system(size: 20))
+        }
     }
     
 }

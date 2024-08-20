@@ -32,4 +32,15 @@ class LocationsDataService{
         Location(name: "Jardim do Baobá", cityName: "Recife", coordinates: CLLocationCoordinate2D(latitude: -8.041091, longitude: -34.904031), description: "O Jardim do Baobá é um oásis urbano em Recife, com um exuberante baobá como protagonista. Localizado às margens do Rio Capibaribe, o parque oferece um espaço tranquilo para relaxar e apreciar a natureza. Com uma infraestrutura que inclui bancos, áreas para piquenique e um píer flutuante, o jardim convida à contemplação da paisagem e à conexão com o meio ambiente. É um ponto de encontro para moradores e turistas, que buscam um momento de paz no coração da cidade.", adress: "Rua Madre Loyola, 2, Jaqueira, Recife - PE, 52050-001, Brazil", imageNames: ["jardimdobaoba"], link: "", tagPlace: getTagPlace(tg: .parque_pracas))
     
     ]
+    
+    static let tagsToFilter: [String : TagToFilter] = [
+    
+        "Cafés" : TagToFilter(tagInformation: getTagPlace(tg: .cafe), showOnMap: true),
+        "Parques e Praças" : TagToFilter(tagInformation: getTagPlace(tg: .parque_pracas), showOnMap: true),
+        "Museus e Cultura" : TagToFilter(tagInformation: getTagPlace(tg: .museus_centros_historicos), showOnMap: true),
+        "Pontos Turísticos" : TagToFilter(tagInformation: getTagPlace(tg: .pontos_turisticos), showOnMap: true),
+        "Restaurantes" : TagToFilter(tagInformation: getTagPlace(tg: .restaurante), showOnMap: true),
+        "Bares e Baladas" : TagToFilter(tagInformation: getTagPlace(tg: .bares_baladas), showOnMap: true)
+    
+    ]
 }
